@@ -12,8 +12,6 @@ Aseprite for Textures (coin, trees)
 Photoshop for Texture (yoshi, LUT)
 
 I used toon lighting for my project throughout. Im not considering it one of my shaders, but ill still disclose it, even if i dont consider it one of my main implementations:
-# Toon
-the Toon lighting I am using is a custom lighting made to work with surface shaders.
 <img width="431" alt="image" src="https://github.com/user-attachments/assets/9f3d4e7c-c962-423b-8962-f4b88061ee5e">
 
 
