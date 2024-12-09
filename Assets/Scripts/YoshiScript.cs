@@ -6,7 +6,7 @@ public class YoshiScript : MonoBehaviour
 {
     public Renderer mat;
 
-    public float value = 0.3f;
+    public int value = 3;
     // Update is called once per frame
     void Update()
     {
@@ -14,17 +14,17 @@ public class YoshiScript : MonoBehaviour
         {
             if (value > 0)
             {
-                value -= 0.1f;
+                value -= 1;
+
             }
             else
             {
-                value = 0.3f;
+                value = 3;
             }
-            if (value < 0.1)
-            {
-                value = 0f;
-            }
-            mat.material.SetFloat("_Outline", value);
+          
+            mat.material.SetFloat("_Outline", 0.1f * (float)value);
+         
+
 
         }
     }

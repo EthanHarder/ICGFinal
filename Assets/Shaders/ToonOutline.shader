@@ -5,8 +5,11 @@ Shader "Final/ToonOutlineShader"
     
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _RampTex ("Ramp Texture", 2D) = "white" {}
-        _OutlineColor ("Outline Color", Color) = (0,0,0,1)
+        _OutlineColor1 ("Outline Color1", Color) = (0,0,0,1)
+        _OutlineColor2 ("Outline Color2", Color) = (0,0,0,1)
+        _OutlineColor3 ("Outline Color3", Color) = (0,0,0,1)
         _Outline ("Outline Width", Range(0, 0.3)) = 0.005
+
 
         
     }
@@ -27,7 +30,10 @@ Shader "Final/ToonOutlineShader"
         
    
         float _Outline;
-        float4 _OutlineColor;
+        float4 _OutlineColor1;
+        float4 _OutlineColor2;
+        float4 _OutlineColor3;
+
 
         void vert (inout appdata_full v) {
             v.vertex.xyz += v.normal * _Outline / 5;
@@ -40,7 +46,12 @@ Shader "Final/ToonOutlineShader"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
-            o.Emission = _OutlineColor.rgb;
+            if (_Outline == 0.3f)
+            o.Emission = _OutlineColor1.rgb;
+            else if (_Outline == 0.2f)
+            o.Emission = _OutlineColor2.rgb;
+            else
+            o.Emission = _OutlineColor3.rgb;
         }
         ENDCG
 
