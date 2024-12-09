@@ -55,3 +55,7 @@ Because this game suggest riding Yoshi and having lots of movement, I felt addin
 Additionally, the tree texture i used in aseprite is being applied to a plane, but we need to make the non-tree parts transparent. thankfully, my texture already has alpha transparency, and WITH A PORTION OF CODE NOT TAUGHT IN LECTURES (we talked), I added these lines to make the transparency function.
 <img width="302" alt="image" src="https://github.com/user-attachments/assets/3dd7c4b5-b38b-4638-afb9-e63ef02aebd4">
 
+# Vertex Bobbing
+I wanted the coin to feel dynamic, so I figured a fun way would be to vertex modify the coin to animate it bobbing up and down.
+This is accomplished by shifting one axis of the entire mesh's vertex along a value changing over time. I use the sin() function with _Time.y and a speed value to clamp it in a -1 to 1 value that repeats, then add a magnitude. this way it bobs up and down. I then modify the speed and magnitude until i get a bouncing effect that I like.
+<img width="387" alt="image" src="https://github.com/user-attachments/assets/6e24b21c-f308-440e-83d3-69fffa4723dc">
