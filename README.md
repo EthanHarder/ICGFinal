@@ -45,7 +45,8 @@ Step 6, tweak contribution value to satisfaction.
 I use two scrolling Textures in the scene.
 The scrolling Texture effect is done by using the Unity _Time values to add modifications to the uv coordinates at runtime. After applying time, we start Combining it with a magnitude, and then clamp the UV value from 0-1 with a modular divide to keep it in the texture bounds. thanks to being clamped we can make the texture scroll back into itself and circulate.
 # Scrolling Coin
-The coin scrolls a simple seamless Texture I made in aseprite. In this context, it gives the illusion of the object rotating in place.
+The coin scrolls a simple seamless Texture I made in aseprite.![Coin](https://github.com/user-attachments/assets/bf4e9aae-cb60-4e07-bb82-4a4cc28e85cd)
+ In this context, it gives the illusion of the object rotating in place.
 <img width="298" alt="image" src="https://github.com/user-attachments/assets/4e4f0908-3feb-479e-8f1d-6bb56491d134">
 
 # Scrolling Trees
@@ -75,5 +76,6 @@ I imagined Yoshi to have 3 shots, and a weak state. To do this, I wanted Yoshi t
 <img width="205" alt="image" src="https://github.com/user-attachments/assets/e30d9eaf-3933-42e7-9181-e16afd76e00a">
 <img width="192" alt="image" src="https://github.com/user-attachments/assets/80dbcf9d-eae8-4289-bdc7-7ce959bd3541">
 This system is done via a custom script that contacts the Outline Shader on the yoshi. *You can cycle between these using the space bar*
+<img width="395" alt="image" src="https://github.com/user-attachments/assets/1b4baa25-e833-4b38-b37f-96d2e0fd4137">
 
 
