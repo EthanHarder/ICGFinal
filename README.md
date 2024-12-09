@@ -11,7 +11,8 @@ Unity
 Aseprite for Textures (coin, trees)
 Photoshop for Texture (yoshi, LUT)
 
-#Color Correction
+# Color Correction
+\n
 A color correction is applied on the camera through a post-process effect. This is done through a LUT to look up replacement colors during runtime. A LUT holds a collection of the color data the screen might use and alters it toward the new values we desire.
 
 I wanted to try and create a bright or pastel effect with the LUT, because the image im looking at for the game appears to be very homogenous in color, so i want to raise the levels uniformly. I also wanted to inject some uniform color, so i picked yellow. my aim was to 'wash out' the image, with the intention of using low contribution to make everything feel united.
