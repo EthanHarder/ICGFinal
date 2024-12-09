@@ -12,7 +12,7 @@ Aseprite for Textures (coin, trees)
 Photoshop for Texture (yoshi, LUT)
 
 # Color Correction
-\n
+
 A color correction is applied on the camera through a post-process effect. This is done through a LUT to look up replacement colors during runtime. A LUT holds a collection of the color data the screen might use and alters it toward the new values we desire.
 
 I wanted to try and create a bright or pastel effect with the LUT, because the image im looking at for the game appears to be very homogenous in color, so i want to raise the levels uniformly. I also wanted to inject some uniform color, so i picked yellow. my aim was to 'wash out' the image, with the intention of using low contribution to make everything feel united.
@@ -37,5 +37,17 @@ Step 5, apply script to the camera
 Step 6, tweak contribution value to satisfaction.
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/2f92ad48-f146-4fa0-84cc-ae71e6e92dca">
 
+# Scrolling textures
+I use two scrolling Textures in the scene.
+The scrolling Texture effect is done by using the Unity _Time values to add modifications to the uv coordinates at runtime. Combining it with a magnitude, and then clamping the UV from 0-1 with a modular divide, we can make the texture scroll back into itself and circulate.
+# Scrolling Coin
+The coin scrolls a simple seamless Texture I made in aseprite. In this context, it gives the illusion of the object rotating in place.
+<img width="298" alt="image" src="https://github.com/user-attachments/assets/4e4f0908-3feb-479e-8f1d-6bb56491d134">
 
+# Scrolling Trees
+Because this game suggest riding Yoshi and having lots of movement, I felt adding some moving trees would make the world feel more active and suggest the player's motion. The trees themselves scroll the same way as the coin, but are now used in the vertex shader instead of the surface shader.
+<img width="284" alt="image" src="https://github.com/user-attachments/assets/33d7d3bb-a8a6-46d3-a7c5-9d73b822e052">
+
+Additionally, the tree texture i used in aseprite is being applied to a plane, but we need to make the non-tree parts transparent. thankfully, my texture already has alpha transparency, and WITH A PORTION OF CODE NOT TAUGHT IN LECTURES (we talked), I added these lines to make the transparency function.
+<img width="302" alt="image" src="https://github.com/user-attachments/assets/3dd7c4b5-b38b-4638-afb9-e63ef02aebd4">
 
