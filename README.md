@@ -43,7 +43,7 @@ Step 6, tweak contribution value to satisfaction.
 
 # Scrolling textures
 I use two scrolling Textures in the scene.
-The scrolling Texture effect is done by using the Unity _Time values to add modifications to the uv coordinates at runtime. Combining it with a magnitude, and then clamping the UV from 0-1 with a modular divide, we can make the texture scroll back into itself and circulate.
+The scrolling Texture effect is done by using the Unity _Time values to add modifications to the uv coordinates at runtime. After applying time, we start Combining it with a magnitude, and then clamp the UV value from 0-1 with a modular divide to keep it in the texture bounds. thanks to being clamped we can make the texture scroll back into itself and circulate.
 # Scrolling Coin
 The coin scrolls a simple seamless Texture I made in aseprite. In this context, it gives the illusion of the object rotating in place.
 <img width="298" alt="image" src="https://github.com/user-attachments/assets/4e4f0908-3feb-479e-8f1d-6bb56491d134">
